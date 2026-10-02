@@ -1,0 +1,617 @@
+/* ========================================
+   IRONFORGE FITNESS - RESPONSIVE STYLES
+   ======================================== */
+
+/* Tablet: 768px and below */
+@media (max-width: 768px) {
+    :root {
+        --font-size-5xl: 36px;
+        --font-size-4xl: 28px;
+        --font-size-3xl: 24px;
+        --spacing-3xl: 40px;
+        --spacing-2xl: 32px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Navbar */
+    .navbar-container {
+        height: 70px;
+        padding: 0 var(--spacing-md);
+    }
+
+    .navbar-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: var(--color-secondary);
+        border-bottom: 1px solid var(--color-border);
+        padding: var(--spacing-lg) 0;
+        z-index: 999;
+    }
+
+    .navbar-nav.active {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: var(--spacing-lg) var(--spacing-lg);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-actions {
+        gap: var(--spacing-md);
+    }
+
+    /* Hero */
+    .hero-heading {
+        font-size: var(--font-size-4xl);
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .hero-copy {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .about-img-container {
+        aspect-ratio: 4/3;
+    }
+
+    .about-accent {
+        position: static;
+        margin-top: var(--spacing-lg);
+        width: 100%;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    /* Trainers */
+    .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    /* Membership */
+    .membership-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .membership-card.featured {
+        transform: scale(1);
+    }
+
+    .billing-toggle {
+        width: 100%;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+
+    /* Testimonials */
+    .testimonial-slide {
+        padding: var(--spacing-lg);
+    }
+
+    .testimonial-text {
+        font-size: var(--font-size-base);
+    }
+
+    .carousel-controls {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    /* Trial CTA */
+    .trial-heading {
+        font-size: var(--font-size-3xl);
+    }
+
+    .trial-actions {
+        flex-direction: column;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-xl);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
+        width: 48px;
+        height: 48px;
+    }
+}
+
+/* Mobile: 480px and below */
+@media (max-width: 480px) {
+    :root {
+        --font-size-5xl: 28px;
+        --font-size-4xl: 24px;
+        --font-size-3xl: 20px;
+        --spacing-3xl: 32px;
+        --spacing-2xl: 24px;
+        --spacing-xl: 16px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 70px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .hero-badge {
+        font-size: 10px;
+        padding: var(--spacing-xs) var(--spacing-md);
+    }
+
+    .hero-heading {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .hero-copy {
+        font-size: var(--font-size-base);
+        margin-bottom: var(--spacing-lg);
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg) 0;
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .stat-value {
+        font-size: var(--font-size-2xl);
+    }
+
+    .stat-label {
+        font-size: 10px;
+    }
+
+    .hero-actions {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+        min-height: 44px;
+    }
+
+    /* Sections */
+    .about,
+    .services,
+    .trainers,
+    .membership,
+    .gallery,
+    .testimonials,
+    .contact {
+        padding: var(--spacing-2xl) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--spacing-2xl);
+    }
+
+    .section-heading {
+        font-size: var(--font-size-3xl);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .section-description {
+        font-size: var(--font-size-sm);
+    }
+
+    /* About */
+    .about-content {
+        padding-top: 0;
+    }
+
+    .about-description {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Services */
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+
+    .service-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .service-description {
+        font-size: var(--font-size-sm);
+    }
+
+    .service-footer {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        align-items: flex-start;
+    }
+
+    /* Trainers */
+    .trainers-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .trainer-name {
+        font-size: var(--font-size-base);
+    }
+
+    .trainer-bio {
+        font-size: 12px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* Membership */
+    .billing-toggle {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .toggle-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 12px;
+    }
+
+    .membership-card {
+        padding: var(--spacing-lg);
+    }
+
+    .plan-name {
+        font-size: var(--font-size-lg);
+    }
+
+    .amount {
+        font-size: var(--font-size-2xl);
+    }
+
+    .plan-features li {
+        font-size: 12px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .gallery-item {
+        aspect-ratio: 16/12;
+    }
+
+    /* Testimonials */
+    .testimonial-slide {
+        padding: var(--spacing-lg);
+        height: auto;
+    }
+
+    .testimonial-slides {
+        height: auto;
+    }
+
+    .testimonial-text {
+        font-size: var(--font-size-sm);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .carousel-controls {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+
+    .dot-indicators {
+        gap: var(--spacing-sm);
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .dot.active {
+        width: 24px;
+    }
+
+    /* Trial CTA */
+    .trial-heading {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-md);
+    }
+
+    .trial-description {
+        font-size: var(--font-size-sm);
+    }
+
+    .trial-actions {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    /* Contact */
+    .form-title {
+        font-size: var(--font-size-lg);
+    }
+
+    .form-subtitle {
+        font-size: var(--font-size-sm);
+    }
+
+    .detail-item {
+        gap: var(--spacing-md);
+    }
+
+    .detail-item h4 {
+        font-size: var(--font-size-sm);
+    }
+
+    .detail-item p {
+        font-size: 12px;
+    }
+
+    .contact-map {
+        min-height: 250px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .footer-title {
+        font-size: 11px;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-copyright {
+        font-size: 11px;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+        width: 44px;
+        height: 44px;
+        bottom: var(--spacing-md);
+        right: var(--spacing-md);
+    }
+
+    .whatsapp-button svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Small Mobile: 360px and below */
+@media (max-width: 360px) {
+    :root {
+        --spacing-xl: 12px;
+        --spacing-lg: 16px;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .navbar-container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .section-heading {
+        font-size: var(--font-size-2xl);
+    }
+
+    .hero-heading {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 12px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .whatsapp-button,
+    .carousel-controls,
+    .navbar-toggle {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+/* Accessibility: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #1a1a1a;
+        --color-border: #333333;
+    }
+
+    .service-card,
+    .trainer-card,
+    .membership-card,
+    .testimonial-slide {
+        background-color: #1a1a1a;
+        border-color: #333333;
+    }
+
+    .section-heading {
+        color: #ffffff;
+    }
+}
+
+/* Landscape Orientation */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-stats {
+        display: none;
+    }
+
+    .hero-actions {
+        flex-direction: row;
+    }
+}
+
+/* Large Desktop: 1440px and above */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .services-grid,
+    .trainers-grid {
+        gap: var(--spacing-3xl);
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+    /* Optimize for retina displays */
+    .navbar-toggle span,
+    .dot {
+        border: 1px solid transparent;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+    .btn,
+    button,
+    a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+/* Low Bandwidth/Data Saver Mode */
+@media (prefers-reduced-data: reduce) {
+    img {
+        background-color: var(--color-background);
+    }
+
+    .hero-image::before {
+        display: none;
+    }
+
+    .service-card:hover,
+    .trainer-card:hover {
+        box-shadow: none;
+    }
+}
